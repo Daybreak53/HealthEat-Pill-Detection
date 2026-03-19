@@ -23,16 +23,16 @@ def inference():
         for box in result.boxes:
             x1, y1, x2, y2 = box.xyxy[0].tolist()
             pred_yolo_cls = int(box.cls.item())
-            original_category_id = CONFIG["inv_class_mapping"].get(pred_yolo_cls, pred_yolo_cls)
+            original_category_id = model.names[pred_yolo_cls]
 
             row = {
                 "annotation_id": annotation_id_counter,
                 "image_id": image_id,
                 "category_id": original_category_id,
-                "bbox_x": x1,
-                "bbox_y": y1,
-                "bbox_w": x2 - x1,
-                "bbox_h": y2 - y1,
+                "bbox_x": int(round(x1)),
+                "bbox_y": int(round(y1)),
+                "bbox_w": int(round(x2 - x1)),
+                "bbox_h": int(round(y2 - y1)),
                 "score": round(float(box.conf.item()), 5)
             }
             submission_rows.append(row)
