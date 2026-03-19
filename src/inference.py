@@ -5,7 +5,7 @@ from ultralytics import YOLO
 from config import CONFIG
 
 def inference():
-    best_model_path = f"/runs/detect/{CONFIG['wandb_project']}/{CONFIG['wandb_run_name']}/weights/best.pt"
+    best_model_path = f"runs/detect/{CONFIG['wandb_project']}/{CONFIG['wandb_run_name']}/weights/best.pt"
     model = YOLO(best_model_path)
     submission_rows = []
     annotation_id_counter = 1
