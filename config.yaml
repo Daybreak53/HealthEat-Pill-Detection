@@ -22,9 +22,6 @@ dataset_dir: "data/dataset"
 submission_csv: "team5_submission.csv"
 
 # 전처리 및 기타 설정
-inv_class_mapping:
-  0: 1
-  1: 2
 img_size: 640
 bbox_margin: 0.1
 split_ratio: [0.8, 0.1, 0.1]
