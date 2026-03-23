@@ -1,8 +1,8 @@
 # W&B 및 모델 설정
 wandb_project: "HealthEat-Pill-Detection"
 wandb_entity: "team5pj1"
-wandb_run_name: "yolov11n_baseline"
-model_name: "yolo11n.pt"
+wandb_run_name: "yolov11m_baseline"
+model_name: "yolo11m.pt"
 
 # 학습 하이퍼파라미터
 epochs: 20
