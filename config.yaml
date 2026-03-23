@@ -26,13 +26,13 @@ img_size: 640
 bbox_margin: 0.1
 split_ratio: [0.8, 0.1, 0.1]
 use_code_as_classname: false
-hsv_h: 0.015
-hsv_s: 0.7
-hsv_v: 0.4
-degrees: 30
-translate: 0.1
-scale: 0.5
-fliplr: 0.5
-flipud: 0.5
-mosaic: 1.0
-mixup: 0.2
+hsv_h: 0.01589
+hsv_s: 0.7105
+hsv_v: 0.40115
+degrees: 0.0
+translate: 0.15358
+scale: 0.38187
+fliplr: 0.50441
+flipud: 0.0
+mosaic: 0.99815
+mixup: 0.0
