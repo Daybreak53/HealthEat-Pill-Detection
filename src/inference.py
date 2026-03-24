@@ -10,7 +10,13 @@ def inference():
     submission_rows = []
     annotation_id_counter = 1
     
-    results = model.predict(source=CONFIG["test_img_dir"], imgsz=CONFIG["imgsz"], stream=True, verbose=False)
+    results = model.predict(
+        source=CONFIG["test_img_dir"],
+        conf=CONFIG["conf"],
+        imgsz=CONFIG["imgsz"],
+        stream=True,
+        verbose=False
+    )
 
     for result in results:
         filename = os.path.basename(result.path)

@@ -6,7 +6,12 @@ def main():
     best_model_path = f"runs/detect/{CONFIG['wandb_project']}/{CONFIG['wandb_run_name']}/weights/best.pt"
     model = YOLO(best_model_path)
 
-    metrics = model.val(data=CONFIG["data_yaml"])
+    metrics = model.val(
+        data=CONFIG["data_yaml"],
+        conf=CONFIG["conf"],
+        imgsz=CONFIG["imgsz"]
+    )
+    
     print(metrics.results_dict)
 
 
