@@ -5,13 +5,19 @@ wandb_run_name: "yolov11l_baseline"
 model_name: "yolo11l.pt"
 
 # 학습 하이퍼파라미터
-epochs: 20
-imgsz: 640
-batch: 16
+epochs: 200
+imgsz: 1024
+batch: 8
 device: "cuda"
-workers: 2
+workers: 4
 seed: 42
 patience: 10
+lr0: 0.001
+lrf: 0.1
+cls: 1.0
+label_smoothing: 0.1
+optimizer: 'MuSGD'
+dfl: 1.0
 
 # 경로 설정
 data_yaml: "data/dataset/data.yaml"
@@ -22,9 +28,9 @@ dataset_dir: "data/dataset"
 submission_csv: "team5_submission.csv"
 
 # 전처리 및 기타 설정
-img_size: 640
+img_size: 1024
 bbox_margin: 0.1
-split_ratio: [0.8, 0.1, 0.1]
+split_ratio: [0.8, 0.2]
 use_code_as_classname: false
 hsv_h: 0.01589
 hsv_s: 0.7105

@@ -1,0 +1,49 @@
+# yolo11l-p2.yaml
+nc: 56 # 우리 데이터셋의 알약 클래스 개수
+
+scales:
+  # [depth, width, max_channels]
+  l: [1.00, 1.00, 512] # 현재 팀이 사용하는 YOLO11l 스케일 유지
+
+backbone:
+  # [from, repeats, module, args]
+  - [-1, 1, Conv, ] # 0-P1/2
+  - [-1, 1, Conv, ] # 1-P2/4 (여기의 고해상도 정보가 나중에 P2 헤드로 갑니다)
+  - [-1, 2, C3k2, [256, False, 0.25]] # 2
+  - [-1, 1, Conv, ] # 3-P3/8
+  - [-1, 2, C3k2, [512, False, 0.25]] # 4
+  - [-1, 1, Conv, ] # 5-P4/16
+  -] # 6
+  - [-1, 1, Conv, ] # 7-P5/32
+  -] # 8
+  -] # 9
+  -] # 10
+
+head:
+  - [-1, 1, nn.Upsample, [None, 2, "nearest"]]
+  - [[-1, 6], 1, Concat, [1]] # cat backbone P4
+  - [-1, 2, C3k2, [512, False]] # 13
+
+  - [-1, 1, nn.Upsample, [None, 2, "nearest"]]
+  - [[-1, 4], 1, Concat, [1]] # cat backbone P3
+  - [-1, 2, C3k2, [256, False]] # 16 (P3/8-small)
+
+  # ==== 💡 여기서부터 P2(초소형) 헤드를 위한 추가 레이어 시작 ====
+  - [-1, 1, nn.Upsample, [None, 2, "nearest"]]
+  - [[-1, 2], 1, Concat, [1]] # 가장 높은 해상도인 backbone P2와 결합
+  - [-1, 2, C3k2, [128, False]] # 19 (P2/4-xsmall) : 초소형 알약 엣지 탐지용 돋보기
+
+  - [-1, 1, Conv, ]
+  - [[-1, 16], 1, Concat, [1]] # cat head P3
+  - [-1, 2, C3k2, [256, False]] # 22 (P3/8-small)
+
+  - [-1, 1, Conv, ]
+  - [[-1, 13], 1, Concat, [1]] # cat head P4
+  - [-1, 2, C3k2, [512, False]] # 25 (P4/16-medium)
+
+  - [-1, 1, Conv, ]
+  - [[-1, 10], 1, Concat, [1]] # cat head P5
+  -] # 28 (P5/32-large)
+
+  # ==== 💡 탐지 헤드를 기존 3개에서 4개(19층 포함)로 확장 ====
+  - [[2, 3, 4, 5], 1, Detect, [nc]] # 29 Detect(P2, P3, P4, P5)

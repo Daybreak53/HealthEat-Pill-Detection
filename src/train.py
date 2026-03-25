@@ -13,11 +13,14 @@ def main():
     run = wandb.init(
         project=CONFIG["wandb_project"],
         entity=CONFIG["wandb_entity"],
-        name=CONFIG["wandb_run_name"],
+        name="yolov11l_finetune_highres"
         config=CONFIG,
     )
 
-    model = YOLO(CONFIG["model_name"])
+    model = YOLO("yolo11l-p2.yaml")
+
+    best_weight_path = "/content/HealthEat-Pill-Detection/runs/detect/HealthEat-Pill-Detection/yolov11l_baseline/weights/best.pt"
+    model.load(best_weight_path)
 
     model.train(
         data=CONFIG["data_yaml"],
@@ -28,6 +31,12 @@ def main():
         workers=CONFIG["workers"],
         seed=CONFIG["seed"],
         patience=CONFIG["patience"],
+        lr0=CONFIG["lr0"], 
+        lrf=CONFIG["lrf"], 
+        cls=CONFIG["cls"],
+        label_smoothing=CONFIG["label_smoothing"],
+        optimizer=CONFIG["optimizer"],
+        dfl=CONFIG["dfl"],
         project=CONFIG["wandb_project"],
         name=CONFIG["wandb_run_name"],
 
@@ -40,7 +49,12 @@ def main():
         fliplr=CONFIG["fliplr"],
         flipud=CONFIG["flipud"],
         mosaic=CONFIG["mosaic"],
-        mixup=CONFIG["mixup"]
+        mixup=CONFIG["mixup"],
+
+        copy_paste=0.5,
+        box=10.0,
+        cos_lr=True,
+        freeze=10
     )
 
     wandb.finish()
