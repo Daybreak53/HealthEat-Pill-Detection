@@ -28,6 +28,12 @@ def main():
         workers=CONFIG["workers"],
         seed=CONFIG["seed"],
         patience=CONFIG["patience"],
+        lr0=CONFIG["lr0"], 
+        lrf=CONFIG["lrf"], 
+        cls=CONFIG["cls"],
+        label_smoothing=CONFIG["label_smoothing"],
+        optimizer=CONFIG["optimizer"],
+        dfl=CONFIG["dfl"],
         project=CONFIG["wandb_project"],
         name=CONFIG["wandb_run_name"],
 

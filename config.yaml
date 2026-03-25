@@ -13,6 +13,12 @@ device: "cuda"
 workers: 2
 seed: 42
 patience: 10
+lr0: 0.001
+lrf: 0.1
+cls: 1.0
+label_smoothing: 0.1
+optimizer: 'MuSGD'
+dfl: 1.0
 
 # 경로 설정
 data_yaml: "data/dataset/data.yaml"
