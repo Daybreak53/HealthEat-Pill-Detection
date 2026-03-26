@@ -31,7 +31,6 @@ def main():
         lr0=CONFIG["lr0"], 
         lrf=CONFIG["lrf"], 
         cls=CONFIG["cls"],
-        label_smoothing=CONFIG["label_smoothing"],
         optimizer=CONFIG["optimizer"],
         dfl=CONFIG["dfl"],
         project=CONFIG["wandb_project"],
