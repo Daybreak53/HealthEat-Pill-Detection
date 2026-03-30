@@ -8,8 +8,8 @@ def main():
 
     metrics = model.val(
         data=CONFIG["data_yaml"],
-        conf=CONFIG["conf"],
-        imgsz=CONFIG["imgsz"]
+        agnostic_nms=CONFIG["agnostic_nms"],
+        max_det=CONFIG["max_det"],
     )
     
     raw_ap_tensor = metrics.box.all_ap 
