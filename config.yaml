@@ -31,7 +31,7 @@ submission_csv: "team5_submission.csv"
 # 전처리 및 기타 설정
 img_size: 640
 bbox_margin: 0.1
-split_ratio: [0.8, 0.1, 0.1]
+split_ratio: [0.6, 0.4]
 use_code_as_classname: false
 hsv_h: 0.01589
 hsv_s: 0.7105
