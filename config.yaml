@@ -19,6 +19,8 @@ cls: 1.0
 label_smoothing: 0.1
 optimizer: 'MuSGD'
 dfl: 1.0
+agnostic_nms: True
+max_det: 5
 
 # 경로 설정
 data_yaml: "data/dataset/data.yaml"

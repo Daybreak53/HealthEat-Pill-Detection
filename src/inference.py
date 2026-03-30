@@ -12,8 +12,8 @@ def inference():
     
     results = model.predict(
         source=CONFIG["test_img_dir"],
-        conf=CONFIG["conf"],
-        imgsz=CONFIG["imgsz"],
+        agnostic_nms=CONFIG["agnostic_nms"],
+        max_det=CONFIG["max_det"],
         stream=True,
         verbose=False
     )
