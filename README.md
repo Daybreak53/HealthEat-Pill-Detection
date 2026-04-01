@@ -1,5 +1,5 @@
 # HealthEat-Pill-Detection
-💊 [5팀] Health Eat - 경구약제 Object Detection 모델 개발
+**💊 [5팀] Health Eat - 경구약제 Object Detection 모델 개발**
 
 ### 📌 프로젝트 개요
 - **시나리오:** 작업자가 헬스케어 스타트업 헬스잇(Health Eat)의 AI 엔지니어링 팀원이라고 가정
@@ -9,15 +9,14 @@
 
 ### 📁 디렉토리 구조
 - **data/ :** 이미지 데이터셋 (.gitignore 처리)
-- **models/ :** 모델 설계 코드
-- **notebooks/ :** EDA 및 실험을 위한 주피터 노트북
-- **utils/ :** 데이터 전처리, Augmentation 함수 등
+- **src/ :** 모델 학습 파이프라인 코드
+- **notebook/ :** 실험 진행 방법을 정리한 주피터 노트북
+- **utils/ :** 후처리 코드
 
 ### ⚙️ 기술 스택
 - **Language**: Python
-- **Library**: YOLO(Ultralytics), Pandas, Numpy, yaml, CONFIG, wandb 등
+- **Library**: YOLO(Ultralytics), Pandas, Numpy, yaml, wandb 등
 - **Tools**: GitHub(코드 공유), WandB(실험 관리)
-
 
 ### 🔗 소스 파일 
 - **config.py :** YOLO 모델에서 사용되는 config.yaml의 파일 경로를 정의하고 불러옴
