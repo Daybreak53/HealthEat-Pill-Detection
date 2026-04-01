@@ -25,5 +25,17 @@
 - **train.py :** 모델 파라미터를 사용자 config 값에 맞춰 train 데이터셋을 학습
 - **validate.py :** 학습이 완료된 최적의 모델을 validation 데이터셋에 적용하고 mAP@[0.75:0.95]를 계산하여 모델 성능 평가
 
+### 😎 팀원 소개 및 협업일지 링크  
+- **천지연 : [ Project Manager ]** 프로젝트 총괄 및 협업 환경 세팅, 추가 데이터 정제, 코드 리뷰 및 실험  
+[**협업일지**](https://www.notion.so/AI-9-80a3c6dfd7ee832d8bdd012e9c60bc4e)
+- **김범수 : [ Model Architect ]** 모델 서치, 설계, 베이스라인 코드 작성, 튜닝  
+[**협업일지**](https://www.notion.so/3286f05dfc10807284cae95eb0c027d9)
+- **박채빈 : [ Experiment Lead ]** 모델 학습 하이퍼파라미터 튜닝, 성능 지표 비교  
+[**협업일지**](https://www.notion.so/Daily-32d8278ae1208050aa99f0e11ab9103c)
+- **신희정 : [ Data Engineer ]** 전처리 기법 탐색 및 적용, 전처리 하이퍼파라미터 튜닝  
+[**협업일지**]
+- **양기우 : [ Data Engineer ]** 전처리 기법 탐색 및 적용, 전처리 하이퍼파라미터 튜닝  
+[**협업일지**](https://www.notion.so/335fe74d9d2d803ca976f2c6690931b3)
 
- 
+### 📃 최종 보고서
+**[다운로드 링크 예정]**
