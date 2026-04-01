@@ -38,4 +38,4 @@
 [**협업일지**](https://www.notion.so/335fe74d9d2d803ca976f2c6690931b3)
 
 ### 📃 최종 보고서
-**[다운로드 링크 예정]**
+- **[다운로드](https://drive.google.com/file/d/1VPewr9iUtUNA8MUBX4EJzqedBgeAxi85/view?usp=sharing)**
