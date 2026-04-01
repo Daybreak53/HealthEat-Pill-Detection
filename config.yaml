@@ -5,9 +5,8 @@ wandb_run_name: "yolov11l_baseline"
 model_name: "yolo11l.pt"
 
 # 학습 하이퍼파라미터
-epochs: 20
+epochs: 100
 imgsz: 640
-conf: 0.1
 batch: 16
 device: "cuda"
 workers: 2
@@ -16,11 +15,10 @@ patience: 10
 lr0: 0.001
 lrf: 0.1
 cls: 1.0
-label_smoothing: 0.1
 optimizer: 'MuSGD'
 dfl: 1.0
 agnostic_nms: True
-max_det: 5
+max_det: 4
 
 # 경로 설정
 data_yaml: "data/dataset/data.yaml"
