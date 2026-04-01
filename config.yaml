@@ -1,0 +1,45 @@
+# W&B 및 모델 설정
+wandb_project: "HealthEat-Pill-Detection"
+wandb_entity: "team5pj1"
+wandb_run_name: "yolov11l_baseline"
+model_name: "yolo11l.pt"
+
+# 학습 하이퍼파라미터
+epochs: 100
+imgsz: 640
+batch: 16
+device: "cuda"
+workers: 2
+seed: 42
+patience: 10
+lr0: 0.001
+lrf: 0.1
+cls: 1.0
+optimizer: 'MuSGD'
+dfl: 1.0
+agnostic_nms: True
+max_det: 4
+
+# 경로 설정
+data_yaml: "data/dataset/data.yaml"
+train_img_dir: "data/sprint_ai_project1_data/train_images"
+train_json_dir: "data/sprint_ai_project1_data/train_annotations"
+test_img_dir: "data/sprint_ai_project1_data/test_images"
+dataset_dir: "data/dataset" 
+submission_csv: "team5_submission.csv"
+
+# 전처리 및 기타 설정
+img_size: 640
+bbox_margin: 0.1
+split_ratio: [0.6, 0.4]
+use_code_as_classname: false
+hsv_h: 0.01589
+hsv_s: 0.7105
+hsv_v: 0.40115
+degrees: 0.0
+translate: 0.15358
+scale: 0.38187
+fliplr: 0.50441
+flipud: 0.0
+mosaic: 0.99815
+mixup: 0.0

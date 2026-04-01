@@ -236,3 +236,22 @@ Thumbs.db
 # IDE Specific
 .vscode/
 .idea/
+
+# wandb
+wandb/
+models/wandb/
+
+# yolo runs
+runs/
+models/runs/
+
+# cache
+__pycache__/
+*.pyc
+
+# notebook checkpoints
+.ipynb_checkpoints/
+
+# data
+data/
+models/*.pt
