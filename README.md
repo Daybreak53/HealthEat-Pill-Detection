@@ -33,7 +33,7 @@
 - **박채빈 : [ Experiment Lead ]** 모델 학습 하이퍼파라미터 튜닝, 성능 지표 비교  
 [**협업일지**](https://www.notion.so/Daily-32d8278ae1208050aa99f0e11ab9103c)
 - **신희정 : [ Data Engineer ]** 전처리 기법 탐색 및 적용, 전처리 하이퍼파라미터 튜닝  
-[**협업일지**]
+[**협업일지**](https://www.notion.so/AI09-327bb18aad658062b305ca42814af444)
 - **양기우 : [ Data Engineer ]** 전처리 기법 탐색 및 적용, 전처리 하이퍼파라미터 튜닝  
 [**협업일지**](https://www.notion.so/335fe74d9d2d803ca976f2c6690931b3)
 
