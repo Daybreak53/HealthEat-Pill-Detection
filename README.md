@@ -1,5 +1,5 @@
 # HealthEat-Pill-Detection
-💊 [5팀] Health Eat - 경구약제 Object Detection 모델 개발
+**💊 [5팀] Health Eat - 경구약제 Object Detection 모델 개발**
 
 ### 📌 프로젝트 개요
 - **시나리오:** 작업자가 헬스케어 스타트업 헬스잇(Health Eat)의 AI 엔지니어링 팀원이라고 가정
@@ -9,15 +9,14 @@
 
 ### 📁 디렉토리 구조
 - **data/ :** 이미지 데이터셋 (.gitignore 처리)
-- **models/ :** 모델 설계 코드
-- **notebooks/ :** EDA 및 실험을 위한 주피터 노트북
-- **utils/ :** 데이터 전처리, Augmentation 함수 등
+- **src/ :** 모델 학습 파이프라인 코드
+- **notebook/ :** 실험 진행 방법을 정리한 주피터 노트북
+- **utils/ :** 후처리 코드
 
 ### ⚙️ 기술 스택
 - **Language**: Python
-- **Library**: YOLO(Ultralytics), Pandas, Numpy, yaml, CONFIG, wandb 등
+- **Library**: YOLO(Ultralytics), Pandas, Numpy, yaml, wandb 등
 - **Tools**: GitHub(코드 공유), WandB(실험 관리)
-
 
 ### 🔗 소스 파일 
 - **config.py :** YOLO 모델에서 사용되는 config.yaml의 파일 경로를 정의하고 불러옴
@@ -26,5 +25,17 @@
 - **train.py :** 모델 파라미터를 사용자 config 값에 맞춰 train 데이터셋을 학습
 - **validate.py :** 학습이 완료된 최적의 모델을 validation 데이터셋에 적용하고 mAP@[0.75:0.95]를 계산하여 모델 성능 평가
 
+### 😎 팀원 소개 및 협업일지 링크  
+- **천지연 : [ Project Manager ]** 프로젝트 총괄 및 협업 환경 세팅, 추가 데이터 정제, 코드 리뷰 및 실험  
+[**협업일지**](https://www.notion.so/AI-9-80a3c6dfd7ee832d8bdd012e9c60bc4e)
+- **김범수 : [ Model Architect ]** 모델 서치, 설계, 베이스라인 코드 작성, 튜닝  
+[**협업일지**](https://www.notion.so/3286f05dfc10807284cae95eb0c027d9)
+- **박채빈 : [ Experiment Lead ]** 모델 학습 하이퍼파라미터 튜닝, 성능 지표 비교  
+[**협업일지**](https://www.notion.so/Daily-32d8278ae1208050aa99f0e11ab9103c)
+- **신희정 : [ Data Engineer ]** 전처리 기법 탐색 및 적용, 전처리 하이퍼파라미터 튜닝  
+[**협업일지**]
+- **양기우 : [ Data Engineer ]** 전처리 기법 탐색 및 적용, 전처리 하이퍼파라미터 튜닝  
+[**협업일지**](https://www.notion.so/335fe74d9d2d803ca976f2c6690931b3)
 
- 
+### 📃 최종 보고서
+**[다운로드 링크 예정]**
