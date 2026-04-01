@@ -8,7 +8,7 @@ def run_ensemble():
         '91fz7ntu.csv',
         '8n81iwq8.csv',
         '13sdu82t.csv',
-        '2opu9myf.csv',
+        '0qti3e4e.csv',
     ]
     
     # 데이터 로드
@@ -54,7 +54,7 @@ def run_ensemble():
         # WBF 적용
         boxes, scores, labels = weighted_boxes_fusion(
             boxes_list, scores_list, labels_list,
-            weights=[1.5, 2.5, 1.5, 2.5, 1.0], 
+            weights=[2.5, 2.0, 1.0, 1.5, 1.5], 
             iou_thr=0.5, 
             skip_box_thr=0.1
         )
